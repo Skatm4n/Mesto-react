@@ -1,6 +1,6 @@
 import React from "react";
 
-function PopupForm(props) {
+function PopupWithForm(props) {
   return (
     <div className={`popup popup_type_${props.name} ${props.isOpen && 'popup_visible'}`}>
       <div className="popup__modal">
@@ -30,4 +30,4 @@ function PopupForm(props) {
   );
 }
 
-export default PopupForm;
+export default PopupWithForm;

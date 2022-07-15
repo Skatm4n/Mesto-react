@@ -4,11 +4,11 @@ import api from '../utils/Api';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
-import PopupForm from './PopupForm';
+import PopupWithForm from './PopupWithForm';
 import PopupEditData from './PopupEditData';
 import PopupEditAvatar from './PopupEditAvatar';
 import PopupAddCard from './PopupAddCard';
-import PopupZoom from './PopupZoom';
+import ImagePopup from './ImagePopup';
 import './../index.css';
 
 
@@ -156,7 +156,7 @@ function App() {
           bText='Сохранить'
         />
 
-        <PopupForm
+        <PopupWithForm
           name='submit-deleting'
           title='Вы уверены?'
           bText='Да'
@@ -170,7 +170,7 @@ function App() {
           onClose={closeAllPopups}
         />
 
-        <PopupZoom
+        <ImagePopup
           card={cardSelect}
           onClose={closeAllPopups}
         />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import PopupForm from "./PopupForm";
+import PopupWithForm from "./PopupWithForm";
 
 function PopupAddCard(props) {
 
@@ -31,7 +31,7 @@ function PopupAddCard(props) {
     [props.isOpen])
 
   return (
-    <PopupForm
+    <PopupWithForm
       name='add'
       title="Новое место"
       bText='Создать'
@@ -63,7 +63,7 @@ function PopupAddCard(props) {
         onChange={handleLinkInput}
       />
       <span className="popup__error image-url-input-error" />
-    </PopupForm>
+    </PopupWithForm>
   )
 }
 

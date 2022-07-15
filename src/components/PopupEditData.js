@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import PopupForm from "./PopupForm";
+import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../utils/CurrentUser";
 
 function PopupEditData(props) {
@@ -34,7 +34,7 @@ function PopupEditData(props) {
   }
 
   return (
-    <PopupForm
+    <PopupWithForm
       name='edit'
       title='Редактировать профиль'
       bText={props.bText}
@@ -69,7 +69,7 @@ function PopupEditData(props) {
       />
       <span className="popup__error description-input-error" />
 
-    </PopupForm>
+    </PopupWithForm>
   );
 
 }

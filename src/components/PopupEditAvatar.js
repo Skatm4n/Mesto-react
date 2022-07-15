@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef } from "react";
-import PopupForm from "./PopupForm";
+import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../utils/CurrentUser";
 
 function PopupEditAvatar(props) {
@@ -28,7 +28,7 @@ function PopupEditAvatar(props) {
   }
 
   return (
-    <PopupForm
+    <PopupWithForm
       name="edit-avatar"
       title="Обновить аватар"
       bText='Сохранить'
@@ -46,7 +46,7 @@ function PopupEditAvatar(props) {
         ref={avatarSrc}
       />
       <span className="popup__error avatar-url-input-error" />
-    </PopupForm>
+    </PopupWithForm>
   )
 }
 
