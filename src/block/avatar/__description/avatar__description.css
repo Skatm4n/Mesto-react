@@ -1,0 +1,17 @@
+.avatar__description {
+  max-width: 100%;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.22;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 756px) {
+  .avatar__description {
+    font-size: 14px;
+    text-align: center;
+  }
+}

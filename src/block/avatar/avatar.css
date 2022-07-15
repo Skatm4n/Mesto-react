@@ -1,0 +1,15 @@
+.avatar {
+  max-width: 528px;
+  display: flex;
+  flex-basis: 461px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 756px) {
+  .avatar {
+    max-width: 282px;
+    flex-basis: 0;
+    flex-direction: column;
+  }
+}

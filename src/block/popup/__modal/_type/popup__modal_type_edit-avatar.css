@@ -1,0 +1,7 @@
+.popup__modal_type_edit-avatar {
+  min-height: 272px;
+}
+
+.popup__modal_type_edit-avatar .popup__form-btn {
+  margin: 18px 0px 0px;
+}

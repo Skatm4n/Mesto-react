@@ -1,0 +1,7 @@
+.popup__modal_type_deleting {
+  min-height: 181px;
+}
+
+.popup__modal_type_deleting .popup__form-btn {
+  margin: -16px 0 0;
+}

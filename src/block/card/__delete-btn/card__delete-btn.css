@@ -1,0 +1,15 @@
+.card__delete-btn {
+  width: 18px;
+  height: 19px;
+  border: none;
+  background: transparent url(../../../images/recycle.svg);
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: all 1s ease;
+}
+
+.card__delete-btn:hover {
+  opacity: 0.6;
+}

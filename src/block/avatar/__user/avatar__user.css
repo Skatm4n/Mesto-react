@@ -1,0 +1,9 @@
+.avatar__user {
+  margin-right: 18px;
+}
+
+@media screen and (max-width: 756px) {
+  .avatar__user {
+    margin-right: 10px;
+  }
+}
