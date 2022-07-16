@@ -3,6 +3,7 @@
   height: 120px;
   object-fit: cover;
   border-radius: 50%;
+  transition: all 1s ease;
 }
 
 .avatar__image:hover {

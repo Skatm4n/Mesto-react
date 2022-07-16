@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { CurrentUserContext } from '../utils/CurrentUser';
 import api from '../utils/Api';
 import Header from './Header';
@@ -98,8 +98,6 @@ function App() {
       api.reduceCardLike
     }
   }*/
-
-
 
   function handlePopupEditData() {
     setPopupEditDataOpen(!isPopupEditDataOpen);

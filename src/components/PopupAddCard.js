@@ -3,8 +3,8 @@ import PopupWithForm from "./PopupWithForm";
 
 function PopupAddCard(props) {
 
-  const [name, setName] = useState([]);
-  const [link, setLink] = useState([]);
+  const [name, setName] = useState('');
+  const [link, setLink] = useState('');
 
   function handleNameInput(evt) {
     setName(evt.target.value);

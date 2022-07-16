@@ -11,10 +11,10 @@ function ImagePopup({ card, onClose }) {
         />
         <img
           className="album__image"
-          src={card ? card.link : ''}
-          alt={card ? card.name : ''} />
+          src={card?.link}
+          alt={card?.name} />
         <figcaption className="album__image-capture">
-          {card ? card.name : ''}
+          {card?.name}
         </figcaption>
       </figure>
     </div>
