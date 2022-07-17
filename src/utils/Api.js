@@ -80,6 +80,16 @@ class Api {
     })
       .then(this._checkResult);
   }
+
+  changeCardLikeStatus(cardId, isLiked) {
+
+    if (isLiked) {
+      return this.addCardLike(cardId);
+    } else {
+      return this.reduceCardLike(cardId);
+    }
+  }
+
 }
 
 const api = new Api({

@@ -9,7 +9,6 @@ function PopupEditData(props) {
   const [name, setName] = useState('')
   const [description, setDescription] = useState('')
 
-//Life cycle of edit profile data window
   useEffect(() => {
     setName(currentUser.name);
     setDescription(currentUser.about);

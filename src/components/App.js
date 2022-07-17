@@ -26,7 +26,6 @@ function App() {
   const [cardSelect, setCardSelect] = useState(null);
   const [isLoad, setIsLoad] = useState(false);
 
-  //initial cards loadiiiiiiing...
   useEffect(() => {
     Promise.all([api.takeUserInfo(), api.getInitialCards()])
       .then(([userData, cards]) => {
@@ -83,21 +82,26 @@ function App() {
   function handleCardDelete(card) {
     api.deleteCard(card._id)
       .then(() => {
-        setCards(cards.filter((cardOld) => cardOld._id !== card._id))
+        setCards(cards.filter((cardOld) => cardOld !== card))
       })
       .catch((err) => {
         console.log(`${err}`);
       })
   }
 
-  /*function handleCardLike(card) {
+  function handleCardLike(card) {
 
-    const isLiked = card.like.some(like => like._id === currentUser._id);
+    const isLiked = card.likes.some(like => like._id === currentUser._id);
 
-    if(isLiked) {
-      api.reduceCardLike
-    }
-  }*/
+    api.changeCardLikeStatus(card._id, !isLiked)
+      .then(newCard => {
+        setCards(state =>
+          state.map((c) => c._id === card._id ? newCard : c))
+      })
+      .catch(err => {
+        console.log(`${err}`);
+      })
+  }
 
   function handlePopupEditData() {
     setPopupEditDataOpen(!isPopupEditDataOpen);
@@ -136,6 +140,7 @@ function App() {
           onAddCard={handlePopupAddCard}
           onCardClick={handleCardclick}
           onDeleteClick={handleCardDelete}
+          onLikeClick={handleCardLike}
         />
 
         <Footer />
@@ -180,3 +185,4 @@ function App() {
 }
 
 export default App;
+
